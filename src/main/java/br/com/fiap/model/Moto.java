@@ -26,12 +26,12 @@ public class Moto {
 
     private String numeroIdentificacaoLateral;
     private String motor;
+    private String chassi;
 
     @NotBlank(message = "Status é obrigatório")
-    private String status;
+    private String status; // DISPONIVEL, ALUGADA, EM_MANUTENCAO, VENDA
 
-    private String urgenciaManutencao;
-
+    private String urgenciaManutencao; // LEVE, MODERADA, CRITICA
     private String descricaoProblema;
 
     private LocalDateTime dataEntrada;
@@ -40,4 +40,4 @@ public class Moto {
     @OneToOne
     @JoinColumn(name = "vaga_id")
     private Vaga vaga;
-}
+} 
